@@ -9,6 +9,11 @@
  * For inquiries contact  george.drettakis@inria.fr
  */
 
+#if defined(__linux__)
+#define _POSIX_C_SOURCE 200809L
+#define __STDC_WANT_LIB_EXT1__ 1
+#endif
+
 #include <torch/extension.h>
 #include "rasterize_points.h"
 
